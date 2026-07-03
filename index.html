@@ -542,12 +542,23 @@ textarea.fi-sm{resize:vertical;min-height:52px;line-height:1.5}
 
       <div class="admin-section">
         <h3><i class="fa-solid fa-users" style="color:var(--blue)"></i> Kelola User</h3>
-        <div style="display:flex;gap:8px;margin-bottom:14px">
-          <input class="fi" id="new-user-email" placeholder="email@toeitechno.com" style="flex:1">
-          <input class="fi" id="new-user-nama" placeholder="Nama lengkap" style="flex:1">
-          <input class="fi" id="new-user-pass" type="password" placeholder="Password" style="flex:1">
-          <button class="btn btn-primary" onclick="createUser()"><i class="fa-solid fa-user-plus"></i> Tambah</button>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px">
+          <div>
+            <label style="display:block;font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">Nama Lengkap</label>
+            <input class="fi" id="new-user-nama" placeholder="Contoh: Budi Santoso" style="width:100%">
+          </div>
+          <div>
+            <label style="display:block;font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">Email</label>
+            <input class="fi" id="new-user-email" type="email" placeholder="budi@toeitechno.com" style="width:100%">
+          </div>
+          <div>
+            <label style="display:block;font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">Password</label>
+            <input class="fi" id="new-user-pass" type="password" placeholder="Min. 6 karakter" style="width:100%">
+          </div>
         </div>
+        <button class="btn btn-primary" onclick="createUser()" style="margin-bottom:16px">
+          <i class="fa-solid fa-user-plus"></i> Tambah User Baru
+        </button>
         <table class="user-table">
           <thead>
             <tr>
